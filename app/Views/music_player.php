@@ -152,19 +152,20 @@
 
 
 
-    <audio id="audio" controls autoplay></audio>
+<audio id="audio" controls autoplay></audio>
 <div class="container">
     <ul id="playlist">
-    <?php foreach ($musicList as $music): ?>
-        <li>
-            <a href="javascript:void(0);" class="play-music" data-src="<?= base_url($music['file_path']) ?>">
-                <?= $music['file_name'] ?>
-            </a>
-            <button class="add-to-playlist" data-music="<?= $music['id'] ?>">+</button>
-        </li>
-    <?php endforeach; ?>
+        <?php foreach ($musicList as $music): ?>
+            <li>
+                <a href="javascript:void(0);" class="play-music" data-src="<?= base_url($music['file_path']) ?>">
+                    <?= $music['id'] ?>
+                </a>
+                <button class="add-to-playlist" data-music="<?= $music['id'] ?>">+</button>
+            </li>
+        <?php endforeach; ?>
     </ul>
 </div>
+
 
 
 
